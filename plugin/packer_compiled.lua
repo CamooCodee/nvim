@@ -74,40 +74,25 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  LuaSnip = {
-    loaded = true,
-    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-nvim-lua"] = {
-    loaded = true,
-    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
   ["cmp-path"] = {
     loaded = true,
     path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
-  },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["guess-indent.nvim"] = {
     config = { "\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17guess-indent\frequire\0" },
@@ -115,39 +100,30 @@ _G.packer_plugins = {
     path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/guess-indent.nvim",
     url = "https://github.com/nmac427/guess-indent.nvim"
   },
-  ["lsp-zero.nvim"] = {
+  ["lazydev.nvim"] = {
     loaded = true,
-    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/lazydev.nvim",
+    url = "https://github.com/folke/lazydev.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["mason-lspconfig.nvim"] = {
-    loaded = true,
-    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
-  },
-  ["mason.nvim"] = {
-    loaded = true,
-    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
-  },
-  neovim = {
-    loaded = true,
-    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/neovim",
-    url = "https://github.com/rose-pine/neovim"
-  },
   ["nvim-cmp"] = {
+    after = { "nvim-lspconfig" },
+    config = { "\27LJ\2\n\v\0\1\1\0\0\0\1K\0\1\0ê\6\1\0\n\0(\0Z6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\6\0005\4\4\0003\5\3\0=\5\5\4=\4\a\0039\4\b\0009\4\t\0049\4\n\0045\6\f\0009\a\b\0009\a\v\a)\tüÿB\a\2\2=\a\r\0069\a\b\0009\a\v\a)\t\4\0B\a\2\2=\a\14\0069\a\b\0009\a\15\aB\a\1\2=\a\16\0069\a\b\0009\a\17\aB\a\1\2=\a\18\0069\a\b\0009\a\19\a5\t\20\0B\a\2\2=\a\21\6B\4\2\2=\4\b\0039\4\22\0009\4\23\0044\6\3\0005\a\24\0>\a\1\0064\a\3\0005\b\25\0>\b\1\aB\4\3\2=\4\23\0035\4\27\0005\5\26\0=\5\28\4=\4\29\3B\1\2\0019\1\2\0009\1\30\0015\3\31\0005\4 \0009\5\b\0009\5\t\0059\5\30\5B\5\1\2=\5\b\0044\5\3\0005\6!\0>\6\1\5=\5\23\4B\1\3\0019\1\2\0009\1\30\1'\3\"\0005\4#\0009\5\b\0009\5\t\0059\5\30\5B\5\1\2=\5\b\0049\5\22\0009\5\23\0054\a\3\0005\b$\0>\b\1\a4\b\3\0005\t%\0>\t\1\bB\5\3\2=\5\23\0045\5&\0=\5'\4B\1\3\1K\0\1\0\rmatching\1\0\1'disallow_symbol_nonprefix_matching\1\1\0\1\tname\fcmdline\1\0\1\tname\tpath\1\0\3\fsources\0\rmatching\0\fmapping\0\6:\1\0\1\tname\vbuffer\1\0\2\fsources\0\fmapping\0\1\3\0\0\6/\6?\fcmdline\15completion\17autocomplete\1\0\1\17autocomplete\0\1\3\0\0\16InsertEnter\16TextChanged\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lsp\fsources\vconfig\t<CR>\1\0\1\vselect\2\fconfirm\n<C-e>\nabort\14<C-Space>\rcomplete\n<C-f>\n<C-b>\1\0\5\n<C-b>\0\t<CR>\0\n<C-e>\0\14<C-Space>\0\n<C-f>\0\16scroll_docs\vinsert\vpreset\fmapping\fsnippet\1\0\4\fsources\0\fmapping\0\15completion\0\fsnippet\0\vexpand\1\0\1\vexpand\0\0\nsetup\bcmp\frequire\0" },
     loaded = true,
+    only_config = true,
     path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
+    config = { "\27LJ\2\nã\3\0\2\f\0\18\2M6\2\0\0009\2\1\0029\2\2\2B\2\1\2'\3\3\0&\2\3\0026\3\0\0009\3\1\0039\3\4\3'\5\5\0B\3\2\2\b\3\0\0X\3\2€+\3\1\0X\4\1€+\3\2\0+\4\0\0\15\0\3\0X\5\4€\18\5\2\0'\6\6\0&\4\6\5X\5\3€\18\5\2\0'\6\a\0&\4\6\0056\5\0\0009\5\1\0059\5\b\5\18\a\4\0B\5\2\2\t\5\0\0X\5\4€9\5\t\0019\5\n\5=\4\v\5X\5'€6\5\0\0009\5\1\0059\5\f\0056\a\0\0009\a\1\a9\a\r\a'\t\14\0006\n\0\0009\n\1\n9\n\2\nB\n\1\2'\v\15\0&\t\v\tB\a\2\0A\5\0\0026\6\0\0009\6\16\0069\6\17\6\t\6\1\0X\6\19€\15\0\3\0X\6\4€\18\6\5\0'\a\6\0&\4\a\6X\6\3€\18\6\5\0'\a\a\0&\4\a\0066\6\0\0009\6\1\0069\6\b\6\18\b\4\0B\6\2\2\t\6\0\0X\6\3€9\6\t\0019\6\n\6=\4\v\6K\0\1\0\16shell_error\6v' && poetry env info -p 2>/dev/null\bcd \vsystem\ttrim\15pythonPath\vpython\rsettings\15executable\16/bin/python\24/Scripts/python.exe\nwin32\bhas\v/.venv\vgetcwd\afn\bvim\2\0/\0\2\5\0\2\0\0046\2\0\0'\4\1\0B\2\2\1K\0\1\0\22Pyright attached!\nprintˆ\5\1\0\t\0\29\00036\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0026\1\3\0006\3\0\0'\4\4\0B\1\3\3\15\0\1\0X\3\n€9\3\5\0025\5\t\0004\6\3\0005\a\6\0005\b\a\0=\b\b\a>\a\1\6=\6\n\5B\3\2\1X\3\3€6\3\v\0'\5\f\0B\3\2\0016\3\0\0'\5\r\0B\3\2\0029\3\14\0039\3\5\0035\5\15\0=\0\16\5B\3\2\0016\3\0\0'\5\r\0B\3\2\0029\3\17\0039\3\5\0035\5\18\0=\0\16\0055\6\22\0005\a\20\0005\b\19\0=\b\21\a=\a\23\6=\6\24\0053\6\25\0=\6\26\0053\6\27\0=\6\28\5B\3\2\1K\0\1\0\14on_attach\0\16before_init\0\rsettings\vpython\1\0\1\vpython\0\ranalysis\1\0\1\ranalysis\0\1\0\4\27useLibraryCodeForTypes\2\21typeCheckingMode\nbasic\19diagnosticMode\14workspace\20autoSearchPaths\2\1\0\4\14on_attach\0\16before_init\0\rsettings\0\17capabilities\0\fpyright\17capabilities\1\0\1\17capabilities\0\vlua_ls\14lspconfig\30Failed to precall lazydev\nprint\flibrary\1\0\1\flibrary\0\nwords\1\2\0\0\fvim%.uv\1\0\2\nwords\0\tpath\23${3rd}/luv/library\nsetup\flazydev\npcall\25default_capabilities\17cmp_nvim_lsp\frequire\0" },
+    load_after = {},
     loaded = true,
-    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    needs_bufread = false,
+    path = "/Users/lukas/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
@@ -175,6 +151,12 @@ _G.packer_plugins = {
     path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rose-pine"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/lukas/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -187,6 +169,22 @@ time([[Defining packer_plugins]], false)
 time([[Config for guess-indent.nvim]], true)
 try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17guess-indent\frequire\0", "config", "guess-indent.nvim")
 time([[Config for guess-indent.nvim]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
+time([[Config for rose-pine]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\n\v\0\1\1\0\0\0\1K\0\1\0ê\6\1\0\n\0(\0Z6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\6\0005\4\4\0003\5\3\0=\5\5\4=\4\a\0039\4\b\0009\4\t\0049\4\n\0045\6\f\0009\a\b\0009\a\v\a)\tüÿB\a\2\2=\a\r\0069\a\b\0009\a\v\a)\t\4\0B\a\2\2=\a\14\0069\a\b\0009\a\15\aB\a\1\2=\a\16\0069\a\b\0009\a\17\aB\a\1\2=\a\18\0069\a\b\0009\a\19\a5\t\20\0B\a\2\2=\a\21\6B\4\2\2=\4\b\0039\4\22\0009\4\23\0044\6\3\0005\a\24\0>\a\1\0064\a\3\0005\b\25\0>\b\1\aB\4\3\2=\4\23\0035\4\27\0005\5\26\0=\5\28\4=\4\29\3B\1\2\0019\1\2\0009\1\30\0015\3\31\0005\4 \0009\5\b\0009\5\t\0059\5\30\5B\5\1\2=\5\b\0044\5\3\0005\6!\0>\6\1\5=\5\23\4B\1\3\0019\1\2\0009\1\30\1'\3\"\0005\4#\0009\5\b\0009\5\t\0059\5\30\5B\5\1\2=\5\b\0049\5\22\0009\5\23\0054\a\3\0005\b$\0>\b\1\a4\b\3\0005\t%\0>\t\1\bB\5\3\2=\5\23\0045\5&\0=\5'\4B\1\3\1K\0\1\0\rmatching\1\0\1'disallow_symbol_nonprefix_matching\1\1\0\1\tname\fcmdline\1\0\1\tname\tpath\1\0\3\fsources\0\rmatching\0\fmapping\0\6:\1\0\1\tname\vbuffer\1\0\2\fsources\0\fmapping\0\1\3\0\0\6/\6?\fcmdline\15completion\17autocomplete\1\0\1\17autocomplete\0\1\3\0\0\16InsertEnter\16TextChanged\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lsp\fsources\vconfig\t<CR>\1\0\1\vselect\2\fconfirm\n<C-e>\nabort\14<C-Space>\rcomplete\n<C-f>\n<C-b>\1\0\5\n<C-b>\0\t<CR>\0\n<C-e>\0\14<C-Space>\0\n<C-f>\0\16scroll_docs\vinsert\vpreset\fmapping\fsnippet\1\0\4\fsources\0\fmapping\0\15completion\0\fsnippet\0\vexpand\1\0\1\vexpand\0\0\nsetup\bcmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-lspconfig ]]
+
+-- Config for: nvim-lspconfig
+try_loadstring("\27LJ\2\nã\3\0\2\f\0\18\2M6\2\0\0009\2\1\0029\2\2\2B\2\1\2'\3\3\0&\2\3\0026\3\0\0009\3\1\0039\3\4\3'\5\5\0B\3\2\2\b\3\0\0X\3\2€+\3\1\0X\4\1€+\3\2\0+\4\0\0\15\0\3\0X\5\4€\18\5\2\0'\6\6\0&\4\6\5X\5\3€\18\5\2\0'\6\a\0&\4\6\0056\5\0\0009\5\1\0059\5\b\5\18\a\4\0B\5\2\2\t\5\0\0X\5\4€9\5\t\0019\5\n\5=\4\v\5X\5'€6\5\0\0009\5\1\0059\5\f\0056\a\0\0009\a\1\a9\a\r\a'\t\14\0006\n\0\0009\n\1\n9\n\2\nB\n\1\2'\v\15\0&\t\v\tB\a\2\0A\5\0\0026\6\0\0009\6\16\0069\6\17\6\t\6\1\0X\6\19€\15\0\3\0X\6\4€\18\6\5\0'\a\6\0&\4\a\6X\6\3€\18\6\5\0'\a\a\0&\4\a\0066\6\0\0009\6\1\0069\6\b\6\18\b\4\0B\6\2\2\t\6\0\0X\6\3€9\6\t\0019\6\n\6=\4\v\6K\0\1\0\16shell_error\6v' && poetry env info -p 2>/dev/null\bcd \vsystem\ttrim\15pythonPath\vpython\rsettings\15executable\16/bin/python\24/Scripts/python.exe\nwin32\bhas\v/.venv\vgetcwd\afn\bvim\2\0/\0\2\5\0\2\0\0046\2\0\0'\4\1\0B\2\2\1K\0\1\0\22Pyright attached!\nprintˆ\5\1\0\t\0\29\00036\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0026\1\3\0006\3\0\0'\4\4\0B\1\3\3\15\0\1\0X\3\n€9\3\5\0025\5\t\0004\6\3\0005\a\6\0005\b\a\0=\b\b\a>\a\1\6=\6\n\5B\3\2\1X\3\3€6\3\v\0'\5\f\0B\3\2\0016\3\0\0'\5\r\0B\3\2\0029\3\14\0039\3\5\0035\5\15\0=\0\16\5B\3\2\0016\3\0\0'\5\r\0B\3\2\0029\3\17\0039\3\5\0035\5\18\0=\0\16\0055\6\22\0005\a\20\0005\b\19\0=\b\21\a=\a\23\6=\6\24\0053\6\25\0=\6\26\0053\6\27\0=\6\28\5B\3\2\1K\0\1\0\14on_attach\0\16before_init\0\rsettings\vpython\1\0\1\vpython\0\ranalysis\1\0\1\ranalysis\0\1\0\4\27useLibraryCodeForTypes\2\21typeCheckingMode\nbasic\19diagnosticMode\14workspace\20autoSearchPaths\2\1\0\4\14on_attach\0\16before_init\0\rsettings\0\17capabilities\0\fpyright\17capabilities\1\0\1\17capabilities\0\vlua_ls\14lspconfig\30Failed to precall lazydev\nprint\flibrary\1\0\1\flibrary\0\nwords\1\2\0\0\fvim%.uv\1\0\2\nwords\0\tpath\23${3rd}/luv/library\nsetup\flazydev\npcall\25default_capabilities\17cmp_nvim_lsp\frequire\0", "config", "nvim-lspconfig")
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
