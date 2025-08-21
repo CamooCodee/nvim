@@ -3,7 +3,7 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-    'pylsp', 'terraformls'
+    'pylsp', 'terraformls', "gopls", "ts_ls", "eslint", "tailwindcss"
 })
 
 local homebrew_prefix = vim.fn.getenv("HOMEBREW_PREFIX") or "/opt/homebrew"
@@ -28,7 +28,6 @@ lsp.configure('gopls', {
         unusedwrite = true,
         nilness = true,
         shadow = true,
-        fieldalignment = true
       },
       hints = {
         assignVariableTypes = true,
@@ -51,6 +50,55 @@ lsp.configure('gopls', {
   }
 })
 
+local ts_settings = {
+  filetypes = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx', 'json', 'jsonc' },
+  settings = {
+    javascript = {
+      inlayHints = {
+        includeInlayParameterNameHints = 'all',
+        includeInlayVariableTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayEnumMemberValueHints = true
+      }
+    },
+    typescript = {
+      inlayHints = {
+        includeInlayParameterNameHints = 'all',
+        includeInlayVariableTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayEnumMemberValueHints = true
+      }
+    }
+  }
+}
+
+lsp.configure('tailwindcss', {
+  filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte' },
+  settings = {
+    tailwindCSS = {
+      experimental = {
+        classRegex = {
+          "tw`([^`]*)`",
+          "tw\\.[^`]+`([^`]*)`",
+          "tw\\(([^)]*)\\)",
+          "clsx\\(([^)]*)\\)",
+          { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]" },
+          { "cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]" }
+        }
+      }
+    }
+  }
+})
+
+lsp.configure('tsserver', ts_settings)
+lsp.configure('ts_ls', ts_settings)
+
 lsp.skip_server_setup({'pyright', 'pyflakes'})
+
+lsp.on_attach(function(_, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
 
 lsp.setup()
