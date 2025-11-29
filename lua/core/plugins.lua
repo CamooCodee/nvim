@@ -16,11 +16,13 @@ return require('packer').startup(function(use)
     use {'rose-pine/neovim', as = 'rose-pine'}
     use 'ThePrimeagen/vim-be-good'
     use 'nvim-treesitter/nvim-treesitter'
+	use 'nvim-treesitter/nvim-treesitter-context'
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
     use 'nvim-treesitter/playground'
 
     -- autocomplete with nvim-cmp
