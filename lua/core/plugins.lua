@@ -14,6 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use {'rose-pine/neovim', as = 'rose-pine'}
+    use {'navarasu/onedark.nvim', as = 'onedark'}
     use 'ThePrimeagen/vim-be-good'
     use 'nvim-treesitter/nvim-treesitter'
 	use 'nvim-treesitter/nvim-treesitter-context'
