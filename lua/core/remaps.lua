@@ -25,3 +25,5 @@ vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation)
 vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references)
+
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'LSP Rename' })
