@@ -147,3 +147,11 @@ vim.lsp.config('basedpyright', {
 
 vim.lsp.enable('basedpyright')
 
+vim.lsp.config('terraformls', {
+  cmd = { 'terraform-ls', 'serve' },
+  filetypes = { 'terraform', 'terraform-vars', 'hcl' },
+  root_markers = { '.terraform', '.git' },
+  capabilities = capabilities
+})
+
+vim.lsp.enable('terraformls')
