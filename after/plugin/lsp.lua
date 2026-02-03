@@ -19,14 +19,22 @@ vim.lsp.config('rust_analyzer', {
 
 vim.lsp.enable('rust_analyzer')
 
-vim.lsp.config('tsserver', {
-  cmd = { 'typescript-language-server', '--stdio' }, -- Command to start the server
-  filetypes = { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' }, -- File extensions it supports
-  root_markers = { 'package.json', 'tsconfig.json', '.git' }, -- Files used to identify the project root
-  capabilities = capabilities
+vim.lsp.config('vtsls', {
+  cmd = { 'vtsls', '--stdio' },
+  filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+  root_markers = { 'package.json', 'tsconfig.json', '.git' },
+  capabilities = capabilities,
+  settings = {
+    typescript = {
+      updateImportsOnFileMove = { enabled = "always" },
+      suggest = { completeFunctionCalls = true },
+    },
+    vtsls = {
+      enableMoveToFileCodeAction = true,
+    },
+  }
 })
-
-vim.lsp.enable('tsserver')
+vim.lsp.enable('vtsls')
 
 vim.lsp.config('svelteserver', {
     cmd = { 'svelteserver', '--stdio' }, -- Command to start the server
