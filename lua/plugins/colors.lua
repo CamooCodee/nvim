@@ -13,19 +13,32 @@
 -- }
 --
 
+-- return {
+--     "folke/tokyonight.nvim",
+--     lazy = false,
+--     priority = 1000,
+--     opts = {
+--         transparent = true,
+--         styles = {
+--             sidebars = "transparent",
+--             floats = "transparent",
+--         },
+--     },
+--     config = function(_, opts)
+--         require("tokyonight").setup(opts)
+--         vim.cmd.colorscheme("tokyonight")
+--     end
+-- }
+
 return {
-    "folke/tokyonight.nvim",
+    "shaunsingh/moonlight.nvim",
     lazy = false,
     priority = 1000,
-    opts = {
-        transparent = true,
-        styles = {
-            sidebars = "transparent",
-            floats = "transparent",
-        },
-    },
-    config = function(_, opts)
-        require("tokyonight").setup(opts)
-        vim.cmd.colorscheme("tokyonight")
+    init = function()
+        vim.g.moonlight_italic_comments = true
+        vim.g.moonlight_disable_background = true
+    end,
+    config = function()
+        vim.cmd.colorscheme("moonlight")
     end
 }
