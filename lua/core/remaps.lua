@@ -17,7 +17,7 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 
 vim.keymap.set("n", "Q", "<nop>")
 
-vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ex", "<cmd>Oil<CR>")
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { silent = true })
 
 -- LSP:
