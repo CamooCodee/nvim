@@ -1,20 +1,13 @@
-require('onedark').setup({
-    style = 'darker',
-})
+return {
+    "navarasu/onedark.nvim",
+    name = "onedark",
+    priority = 1000,
+    config = function()
+        require("onedark").setup({
+            style = "darker",
+            transparent = true,
+        })
 
-vim.cmd.colorscheme('onedark')
-
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
-
--- Define the function globally
-_G.FixColors = function()
-    -- The highlight groups you want to clear
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
-
-
-    print("Background transparency applied!")
-end
+        vim.cmd.colorscheme("onedark")
+    end
+}
