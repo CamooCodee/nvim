@@ -26,3 +26,9 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 100
 
 vim.opt.colorcolumn = "80"
+
+vim.diagnostic.config({
+    virtual_text = {
+        spacing = 12
+    }
+})

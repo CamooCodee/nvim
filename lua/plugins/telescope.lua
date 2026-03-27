@@ -23,13 +23,13 @@ return {
             function()
                 require("telescope.builtin").grep_string()
             end
-        },
-        {
-            "<leader>gr",
-            function()
-                require("telescope.builtin").lsp_references()
-            end
         }
+        --     {
+        --         "<leader>gr",
+        --         function()
+        --             require("telescope.builtin").lsp_references()
+        --         end
+        --     }
     },
     config = function()
         require("telescope").setup()
