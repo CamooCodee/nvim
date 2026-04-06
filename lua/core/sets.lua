@@ -32,3 +32,5 @@ vim.diagnostic.config({
         spacing = 12
     }
 })
+
+vim.opt.undofile = true

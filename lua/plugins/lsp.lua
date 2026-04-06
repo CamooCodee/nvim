@@ -131,7 +131,7 @@ return {
         vim.lsp.config('basedpyright', {
             cmd = { 'basedpyright-langserver', '--stdio' },
             filetypes = { 'python' },
-            root_markers = { '.venv' },
+            root_markers = { '.venv', "pyrightconfig.json" },
             capabilities = capabilities,
             settings = {
                 basedpyright = {
@@ -150,7 +150,10 @@ return {
                             functionReturnTypes = true,
                             genericTypes = true,
                         },
-                        venvPath = ".",
+                        venvPath = {
+                            ".",
+                            ".venv",
+                        }
                     },
                 },
             },

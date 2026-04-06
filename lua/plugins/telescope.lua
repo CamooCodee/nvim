@@ -8,7 +8,8 @@ return {
             function()
                 require("telescope.builtin").find_files({
                     hidden = true,
-                    file_ignore_patterns = { ".git/", "tmp/", "node_modules", ".venv" }
+                    no_ignore = true,
+                    file_ignore_patterns = { ".git/", "tmp/", "node_modules", ".venv", "__pycache__", ".DS_Store" }
                 })
             end
         },
