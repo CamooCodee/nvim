@@ -25,6 +25,8 @@ vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation)
 vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition)
 vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, { desc = "LSP Hover" })
+vim.keymap.set("n", "<leader>w", vim.lsp.buf.references, { desc = "Where: references" })
+vim.keymap.set("n", "<leader>rn", "grn", { remap = true })
 
 -- Quickfix:
 vim.keymap.set("n", "J", "<cmd>cnext<CR>")

@@ -40,5 +40,6 @@ return {
     end,
     config = function()
         vim.cmd.colorscheme("moonlight")
+        vim.api.nvim_set_hl(0, "CursorLine", { bg = "#252535" })
     end
 }
