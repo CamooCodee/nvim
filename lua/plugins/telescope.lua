@@ -2,6 +2,7 @@ local ignore = {
     ".git/",
     "node_modules/",
     ".venv/",
+    ".poetry-venv/",
     "__pycache__/",
     ".DS_Store",
     "uv.lock",

@@ -153,6 +153,7 @@ return {
                         venvPath = {
                             ".",
                             ".venv",
+                            ".poetry-venv",
                         }
                     },
                 },
